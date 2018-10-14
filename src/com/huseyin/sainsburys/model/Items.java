@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Items {
   

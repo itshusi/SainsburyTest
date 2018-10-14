@@ -1,6 +1,6 @@
 package com.huseyin.sainsburys.model;
 
-import org.codehaus.jackson.annotate.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Basic POJO to hold information about totals for the JSON.
