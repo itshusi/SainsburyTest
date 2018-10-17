@@ -1,4 +1,4 @@
-package main.java.com.huseyin.sainsburys.model;
+package com.huseyin.sainsburys.model;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 

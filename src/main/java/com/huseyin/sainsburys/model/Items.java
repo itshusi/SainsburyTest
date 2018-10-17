@@ -1,4 +1,4 @@
-package main.java.com.huseyin.sainsburys.model;
+package com.huseyin.sainsburys.model;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
