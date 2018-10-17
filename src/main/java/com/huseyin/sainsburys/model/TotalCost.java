@@ -1,4 +1,4 @@
-package com.huseyin.sainsburys.model;
+package main.java.com.huseyin.sainsburys.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,9 +1,12 @@
-package com.huseyin.sainsburys.model;
+package main.java.com.huseyin.sainsburys.model;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 public class Item {
   private String title;
   private Double unitPrice;
-  private int kcalPer100g;
+  @JsonInclude(Include.NON_NULL)
+  private Double kcalPer100g;
   private String description;
 
 
@@ -12,7 +15,7 @@ public class Item {
   }
   public Item() {}
   
-  public Item(String title, Double unitPrice, int kcalPer100g, String description) {
+  public Item(String title, Double unitPrice, Double kcalPer100g, String description) {
     super();
     this.title = title;
     this.unitPrice = unitPrice;
@@ -39,10 +42,10 @@ public class Item {
   public void setUnitPrice(Double unitPrice) {
     this.unitPrice = unitPrice;
   }
-  public int getKcalPer100g() {
+  public Double getKcalPer100g() {
     return kcalPer100g;
   }
-  public void setKcalPer100g(int kcalPer100g) {
+  public void setKcalPer100g(Double kcalPer100g) {
     this.kcalPer100g = kcalPer100g;
   }
   public String getDescription() {
