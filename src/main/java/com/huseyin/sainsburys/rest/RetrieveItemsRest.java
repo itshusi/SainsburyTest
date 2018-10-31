@@ -6,7 +6,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import javax.xml.bind.*;
 
-import com.huseyin.sainsburys.scraper.ScraperUtils;
+import com.huseyin.sainsburys.scraper.ScrapingUtils;
 
 
 @Path("/items")
@@ -20,7 +20,7 @@ public class RetrieveItemsRest {
   @Produces(MediaType.APPLICATION_JSON)
   @Path("/all")
   public String getItemsJson() throws IOException, JAXBException {
-    String items = ScraperUtils.scrapeItemsFromUrl(url).toString();
+    String items = ScrapingUtils.scrapeItemsFromUrl(url).toString();
     return items;
   }
 

@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Collection of static methods that carry out the actual scraping
  */
-public class ScraperUtils {
+public class ScrapingUtils {
 
     /**
      *
@@ -67,9 +67,9 @@ public class ScraperUtils {
     }
 
     /**
-     * Connects to the base url and constructs a Results object
+     * Connects to the base url and constructs a Items object
      * @param url The base url to scrape
-     * @return The Results of the scrape
+     * @return The Items of the scrape
      * @throws IOException If the URL or any child URLs are not valid will throw an exception
      */
     public static Items scrapeItemsFromUrl(String url) throws IOException {

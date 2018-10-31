@@ -9,12 +9,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Items {
   
-    private List<Item> items = new ArrayList<Item>();
-    private TotalCost totalCost;
+    List<Item> items = new ArrayList<Item>();
+    public TotalCost totalCost;
 
       /**
-       * Takes a list of products and calculates the relevant totals.
-       * @param products The list of products
+       * Takes a list of items and calculates the relevant totals.
+       * @param items The list of items
        */
       public Items(List<Item> items) {
           this.items = items;
@@ -28,18 +28,18 @@ public class Items {
       @Override
       public String toString() {
           ObjectMapper mapper = new ObjectMapper();
-          HashMap<String, Object> results = new LinkedHashMap<>(); // Linked map to preserve order in JSON output
-          results.put("results", items);
-          results.put("totalCost", totalCost);
+          HashMap<String, Object> itemsList = new LinkedHashMap<>(); // Linked map to preserve order in JSON output
+          itemsList.put("items", itemsList);
+          itemsList.put("totalCost", totalCost);
           try {
-              return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(results);
+              return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(items);
           } catch (IOException e) {
               return "JSON parse error";
           }
       }
 
-      public List<Item> getProducts() {
-          return items;
+      public List<Item> getItems() {
+        return totalCost.getItems(this);
       }
 
       public double getGross() {

@@ -1,11 +1,13 @@
 package com.huseyin.sainsburys.model;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Basic POJO to hold information about totals for the JSON.
  */
-class TotalCost {
+public class TotalCost {
 
     @JsonProperty("gross")
     private double gross;
@@ -23,5 +25,9 @@ class TotalCost {
 
     public double getVat() {
         return vat;
+    }
+
+    public List<Item> getItems(Items items) {
+        return items.items;
     }
 }

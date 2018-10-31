@@ -11,12 +11,12 @@ import com.huseyin.sainsburys.model.Items;
  */
 public class Scraper {
 
-    private static final Logger LOGGER = Logger.getLogger( ScraperUtils.class.getName() );
+    private static final Logger LOGGER = Logger.getLogger( ScrapingUtils.class.getName() );
 
     public static void main(String[] args) {
         String url = "https://jsainsburyplc.github.io/serverside-test/site/www.sainsburys.co.uk/webapp/wcs/stores/servlet/gb/groceries/berries-cherries-currants6039.html";
         try {
-            Items items = ScraperUtils.scrapeItemsFromUrl(url);
+            Items items = ScrapingUtils.scrapeItemsFromUrl(url);
             System.out.println(items);
 
         } catch (IOException e) {
